@@ -5,7 +5,7 @@ import {Skill} from "./skill/Skill.tsx";
 
 export const Skills = () => {
     return (
-        <StyledSkills >
+        <StyledSkills>
             <SectionTitle>My Skills</SectionTitle>
             <FlexWrapper wrap={'wrap'} justify={'space-between'}>
                 <Skill
