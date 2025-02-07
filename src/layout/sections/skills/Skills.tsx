@@ -2,10 +2,12 @@ import styled from "styled-components";
 import {FlexWrapper} from "../../../components/FlexWrapper.tsx";
 import {SectionTitle} from "../../../components/SectionTitle.tsx";
 import {Skill} from "./skill/Skill.tsx";
+import {Container} from "../../../components/Container.tsx";
 
 export const Skills = () => {
     return (
         <StyledSkills>
+            <Container>
             <SectionTitle>My Skills</SectionTitle>
             <FlexWrapper wrap={'wrap'} justify={'space-between'}>
                 <Skill
@@ -17,7 +19,7 @@ export const Skills = () => {
                     title={'CSS3'}
                     description={'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim'}/>
                 <Skill
-                    iconId={'WEB design'}
+                    iconId={'figmaSvg'}
                     title={'Figma'}
                     description={'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim'}/>
                 <Skill
@@ -33,12 +35,12 @@ export const Skills = () => {
                     title={'React'}
                     description={'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim'}/>
             </FlexWrapper>
+            </Container>
         </StyledSkills>
     );
 };
 
 const StyledSkills = styled.section`
-    background-color: purple;
-    min-height: 100vh;
      
+    
 `

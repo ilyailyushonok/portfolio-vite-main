@@ -1,4 +1,5 @@
 import {createGlobalStyle} from "styled-components";
+import {Theme} from "./Theme.tsx";
 
 export const GlobalStyle = createGlobalStyle`
     *,
@@ -17,10 +18,14 @@ export const GlobalStyle = createGlobalStyle`
         sans-serif;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
+        color: ${Theme.colors.font};
+        line-height: 1.2;
     }
+   
     
     a{
         text-decoration: none;
+        color: ${Theme.colors.font};
     }
     ul{
         list-style: none;
@@ -28,12 +33,30 @@ export const GlobalStyle = createGlobalStyle`
     button{
         background-color: unset;
         border: none;
-    }
-    
-
-    code {
-        font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-        monospace;
+        cursor: pointer;
+        color: ${Theme.colors.font};
     }
 
+    section{
+        padding: 100px 150px;
+    }    
+    section:nth-of-type(odd) {
+        background-color: ${Theme.colors.primaryBG};
+    }
+
+section:nth-of-type(even) {
+        background-color: ${Theme.colors.secondaryBG};
+    }
+
+h3{
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: 0.08em;
+}
+p{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.4;
+}
 `
