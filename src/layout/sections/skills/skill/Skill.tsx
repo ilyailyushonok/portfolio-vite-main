@@ -26,7 +26,7 @@ const StyledSkill = styled.div`
     width: 380px;
     padding: 60px 0 40px;
 `
-const IconWrapper=styled.div`
+export const IconWrapper=styled.div`
 position: relative;
     &::before{
         content: '';
