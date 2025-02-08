@@ -25,8 +25,8 @@ export const Slider = () => {
 };
 
 const StyledSlider = styled.div`
-border: 4px solid green;
-    max-width: 500px;
+border: 4px solid ${Theme.colors.borderColor };
+    max-width: 540px;
     
 `
 const Slide = styled.div`
