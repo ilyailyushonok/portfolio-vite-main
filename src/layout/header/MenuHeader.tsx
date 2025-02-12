@@ -2,7 +2,7 @@ import styled from "styled-components";
 import {Theme} from "../../styles/Theme.tsx";
 
 
-export const MenuHeader = (props: { menuItems: Array<string> }) => {
+export const MenuHeader = (props: { menuItems: Array<string>,}) => {
     return (
         <StyledMenuHeader>
             <ul>
@@ -31,8 +31,10 @@ const StyledMenuHeader = styled.nav`
         gap: 30px;
         list-style: none;
         justify-content: center;
-
     }
+    @media ${Theme.media.tablet} {
+        display: none;
+    }  
 
 
 `
