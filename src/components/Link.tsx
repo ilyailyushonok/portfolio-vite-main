@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import {Theme} from "../styles/Theme.tsx";
+import {theme} from "../styles/Theme.ts";
 
 export const Link = styled.a`
     position: relative;
@@ -26,6 +26,6 @@ export const Link = styled.a`
         
         content: '';
         display: inline-block;
-        background-color: ${Theme.colors.accent};
+        background-color: ${theme.colors.accent};
     }
 `

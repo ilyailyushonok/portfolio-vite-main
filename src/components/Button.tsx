@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import {Theme} from "../styles/Theme.tsx";
+import {theme} from "../styles/Theme.ts";
 
  export const Button = styled.button`
      font-weight: 400;
@@ -28,7 +28,7 @@ import {Theme} from "../styles/Theme.tsx";
          display: inline-block;
          height: 10px;
          width: 50%;
-         background-color: ${Theme.colors.accent};
+         background-color: ${theme.colors.accent};
      }
 
  `

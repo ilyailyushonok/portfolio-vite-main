@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import {Theme} from "../styles/Theme.tsx";
+import {theme} from "../styles/Theme.ts";
 
 
 export const Container = styled.div`
@@ -8,7 +8,7 @@ export const Container = styled.div`
     min-height: 100%;
     padding: 0 15px;
     margin: 0 auto;
-    //outline: 2px solid #fa0000;
-    background-color: ${Theme.colors.primaryBG};
+    outline: 2px solid #fa0000;
+    background-color: ${theme.colors.primaryBG};
     
 `

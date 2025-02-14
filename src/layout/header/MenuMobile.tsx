@@ -1,15 +1,15 @@
 import styled, {css} from "styled-components";
-import {Theme} from "../../styles/Theme.tsx";
+import {theme} from "../../styles/Theme.ts";
 
 
 
 export const MenuMobile = (props: { menuItems: Array<string>,}) => {
     return (
         <StyledMenuMobile>
-            <BurgerButton  isOpen={true}>
+            <BurgerButton  isOpen={false}>
 <span></span>
             </BurgerButton>
-            <MobileMenuPopup isOpen={true}>
+            <MobileMenuPopup isOpen={false}>
             <ul>
                 {props.menuItems.map((item, index) => {
                     return (
@@ -34,7 +34,7 @@ export const MenuMobile = (props: { menuItems: Array<string>,}) => {
 
 const StyledMenuMobile = styled.nav`
     display: none;
-    @media ${Theme.media.mobile}{
+    @media ${theme.media.mobile}{
         display:block ;
     }`
 
@@ -78,7 +78,7 @@ const BurgerButton = styled.button<{isOpen:boolean}>`
         display: block;
         width: 36px;
         height: 2px;
-        background-color: ${Theme.colors.accent};
+        background-color: ${theme.colors.accent};
         position: absolute;
         left: 40px;
         bottom: 45px;
@@ -93,7 +93,7 @@ const BurgerButton = styled.button<{isOpen:boolean}>`
             display: block;
             width: 36px;
             height: 2px;
-            background-color: ${Theme.colors.accent};
+            background-color: ${theme.colors.accent};
             position: absolute;
             transform: translateY(-10px);
 
@@ -108,7 +108,7 @@ const BurgerButton = styled.button<{isOpen:boolean}>`
             display: block;
             width: 24px;
             height: 2px;
-            background-color: ${Theme.colors.accent};
+            background-color: ${theme.colors.accent};
             position: absolute;
             transform: translateY(10px);
 
@@ -138,7 +138,7 @@ const Mask = styled.span`
     display: inline-block;
     height: 50%;
     overflow-y: hidden;
-    color: ${Theme.colors.accent};
+    color: ${theme.colors.accent};
 
     & + & {
         top: 50%;
@@ -157,7 +157,7 @@ const ListItem = styled.li`
         content: '';
         display: inline-block;
         height: 2px;
-        background-color:${Theme.colors.accent};
+        background-color:${theme.colors.accent};
         position: absolute;
         top:50%;
         left: -10px;
@@ -169,7 +169,7 @@ const ListItem = styled.li`
         &::before{transform: scale(1) }
         ${Mask}{
             transform:skewX(10deg) translateX(4px) ;
-            color: ${Theme.colors.font};
+            color: ${theme.colors.font};
         
         & + ${Mask}{
             transform:skewX(10deg) translateX(-4px) ;

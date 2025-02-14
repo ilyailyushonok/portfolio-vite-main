@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import {Theme} from "../../styles/Theme.tsx";
+import {theme} from "../../styles/Theme.ts";
 
 
 export const MenuHeader = (props: { menuItems: Array<string>,}) => {
@@ -32,7 +32,7 @@ const StyledMenuHeader = styled.nav`
         list-style: none;
         justify-content: center;
     }
-    @media ${Theme.media.tablet} {
+    @media ${theme.media.tablet} {
         display: none;
     }  
 
@@ -55,7 +55,7 @@ const Mask = styled.span`
     display: inline-block;
     height: 50%;
     overflow-y: hidden;
-    color: ${Theme.colors.accent};
+    color: ${theme.colors.accent};
 
     & + & {
         top: 50%;
@@ -74,7 +74,7 @@ const ListItem = styled.li`
         content: '';
         display: inline-block;
         height: 2px;
-        background-color:${Theme.colors.accent};
+        background-color:${theme.colors.accent};
         position: absolute;
         top:50%;
         left: -10px;
@@ -86,7 +86,7 @@ const ListItem = styled.li`
         &::before{transform: scale(1) }
         ${Mask}{
             transform:skewX(10deg) translateX(4px) ;
-            color: ${Theme.colors.font};
+            color: ${theme.colors.font};
         
         & + ${Mask}{
             transform:skewX(10deg) translateX(-4px) ;

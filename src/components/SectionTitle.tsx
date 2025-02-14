@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import {Theme} from "../styles/Theme.tsx";
+import {theme} from "../styles/Theme.ts";
 
 
 export const SectionTitle = styled.h2`
@@ -17,7 +17,7 @@ export const SectionTitle = styled.h2`
         display: inline-block;
         height: 1px;
         width: 55px;
-        background-color: ${Theme.colors.accent};
+        background-color: ${theme.colors.accent};
         
         position: absolute;
         

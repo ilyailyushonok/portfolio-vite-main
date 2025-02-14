@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import {Link} from "../../../../components/Link.tsx";
-import {Theme} from "../../../../styles/Theme.tsx";
+import {theme} from "../../../../styles/Theme.ts";
 import {Button} from "../../../../components/Button.tsx";
 
 type WorkPropsType = {
@@ -29,7 +29,7 @@ export const Work = (props:WorkPropsType) => {
  const StyledWork = styled.div`
      max-width: 540px;
      width: 100%;
-     background-color: ${Theme.colors.secondaryBG};
+     background-color: ${theme.colors.secondaryBG};
      
      ${Link}{
          

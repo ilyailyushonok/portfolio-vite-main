@@ -1,5 +1,5 @@
 import {createGlobalStyle} from "styled-components";
-import {Theme} from "./Theme.tsx";
+import {theme} from "./Theme.ts";
 
 export const GlobalStyle = createGlobalStyle`
     *,
@@ -18,7 +18,7 @@ export const GlobalStyle = createGlobalStyle`
         sans-serif;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
-        color: ${Theme.colors.font};
+        color: ${theme.colors.font};
         line-height: 1.2;
     }
    
@@ -26,7 +26,7 @@ export const GlobalStyle = createGlobalStyle`
     a{
         text-decoration: none;
         cursor: pointer;
-        color: ${Theme.colors.font};
+        color: ${theme.colors.font};
     }
     ul{
         list-style: none;
@@ -35,18 +35,21 @@ export const GlobalStyle = createGlobalStyle`
         background-color: unset;
         border: none;
         cursor: pointer;
-        color: ${Theme.colors.font};
+        color: ${theme.colors.font};
     }
 
     section{
-        padding: 100px 150px;
+        padding: 100px 0;
+        @media ${theme.media.mobile} {
+            padding: 70px 0;
+        }
     }    
     section:nth-of-type(odd) {
-        background-color: ${Theme.colors.primaryBG};
+        background-color: ${theme.colors.primaryBG};
     }
 
 section:nth-of-type(even) {
-        background-color: ${Theme.colors.secondaryBG};
+        background-color: ${theme.colors.secondaryBG};
     }
 
 h3{

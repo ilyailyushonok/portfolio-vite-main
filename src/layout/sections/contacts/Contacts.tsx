@@ -2,7 +2,7 @@ import styled from "styled-components";
 import {SectionTitle} from "../../../components/SectionTitle.tsx";
 import {Button} from "../../../components/Button.tsx";
 import {Container} from "../../../components/Container.tsx";
-import {Theme} from "../../../styles/Theme.tsx";
+import {theme} from "../../../styles/Theme.ts";
 
 export const Contacts = () => {
     return (
@@ -38,9 +38,9 @@ const StyledForm = styled.form`
 `
 const Field = styled.input`
     width: 100%;
-    background-color: ${Theme.colors.secondaryBG};;
-    border: 1px solid ${Theme.colors.borderColor};;
-    color: ${Theme.colors.font};
+    background-color: ${theme.colors.secondaryBG};;
+    border: 1px solid ${theme.colors.borderColor};;
+    color: ${theme.colors.font};
     font-family: 'Poppins', sans-serif;
     padding: 7px 15px;
     font-size: 12px;
@@ -48,10 +48,10 @@ const Field = styled.input`
     letter-spacing: 0.05em;
     text-transform: capitalize;
     &::placeholder {
-        color: ${Theme.colors.placeholderColor};
+        color: ${theme.colors.placeholderColor};
     }
     &:focus-visible{
-        outline: 1px solid ${Theme.colors.borderColor};
+        outline: 1px solid ${theme.colors.borderColor};
         
     }
     

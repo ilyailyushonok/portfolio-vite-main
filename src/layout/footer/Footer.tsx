@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import {Icon} from "../../components/icon/Icon.tsx";
 import {FlexWrapper} from "../../components/FlexWrapper.tsx";
-import {Theme} from "../../styles/Theme.tsx";
+import {theme} from "../../styles/Theme.ts";
 
 export const Footer = () => {
     return (
@@ -38,7 +38,7 @@ export const Footer = () => {
 }
 
 const StyledFooter = styled.footer`
-    background-color: ${Theme.colors.primaryBG};
+    background-color: ${theme.colors.primaryBG};
     padding-bottom: 5px;
 `
 const Name = styled.span`
@@ -63,11 +63,11 @@ const SocialLink = styled.a`
     border-radius:50%;
     width: 32px;
     height: 32px;
-    color:${Theme.colors.accent};
+    color:${theme.colors.accent};
     &:hover{
-        color:${Theme.colors.primaryBG};
+        color:${theme.colors.primaryBG};
         transform: translateY(-3px);
-        background-color: ${Theme.colors.accent};
+        background-color: ${theme.colors.accent};
     }
  `
 const Copyright = styled.small`

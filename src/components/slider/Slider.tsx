@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import {FlexWrapper} from "../FlexWrapper.tsx";
-import {Theme} from "../../styles/Theme.tsx";
+import {theme} from "../../styles/Theme.ts";
 
 export const Slider = () => {
     return (
@@ -25,7 +25,7 @@ export const Slider = () => {
 };
 
 const StyledSlider = styled.div`
-border: 4px solid ${Theme.colors.borderColor };
+border: 4px solid ${theme.colors.borderColor };
     max-width: 540px;
     
 `
@@ -49,14 +49,14 @@ const Pagination = styled.div`
         display: inline-block;
         width: 10px;
         height: 10px;
-        background-color:${Theme.colors.font};
+        background-color:${theme.colors.font};
         border-radius:20px;
         &+span{
             margin-left: 5px;
         }
         &.active{
             width: 30px;
-            background-color: ${Theme.colors.accent};
+            background-color: ${theme.colors.accent};
         }
     }
 `
