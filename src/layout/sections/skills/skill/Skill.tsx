@@ -25,6 +25,8 @@ export const Skill = (props: SkillPropsType) => {
 const StyledSkill = styled.div`
     width: 380px;
     padding: 60px 0 40px;
+    flex-grow:1;
+
 `
 export const IconWrapper=styled.div`
 position: relative;
